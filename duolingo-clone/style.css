@@ -1,0 +1,182 @@
+/* ================================
+   Retro Duolingo Clone Stylesheet
+   ================================ */
+
+/* Import retro font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Color Palette */
+:root {
+  --retro-bg: #0f0f23;     /* dark navy/black */
+  --retro-green: #00ff00;  /* neon green */
+  --retro-pink: #ff00aa;   /* neon pink */
+  --retro-cyan: #00ffff;   /* neon cyan */
+  --retro-yellow: #ffff00; /* bright yellow */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: var(--retro-green);
+  background: repeating-linear-gradient(
+      to right,
+      #111 0px,
+      #111 2px,
+      transparent 2px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #111 0px,
+      #111 2px,
+      transparent 2px,
+      transparent 40px
+    );
+  background-color: black;
+  min-height: 100vh;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  border-bottom: 4px solid var(--retro-cyan);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.logo {
+  color: var(--retro-yellow);
+  text-shadow: 0px 0px 6px var(--retro-yellow);
+}
+
+/* Add this part for logo image styling */
+.navbar .logo img {
+  width: 150px;  /* Adjust the logo size */
+  height: auto;  /* Maintain aspect ratio */
+  padding: 10px;  /* Add padding around the logo */
+}
+
+.navbar a {
+  color: var(--retro-pink);
+  margin: 0 10px;
+  text-decoration: none;
+  text-shadow: 0px 0px 6px var(--retro-pink);
+}
+
+.navbar a:hover {
+  color: var(--retro-cyan);
+  text-shadow: 0px 0px 10px var(--retro-cyan);
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 22px;
+  color: var(--retro-cyan);
+  text-shadow: 0 0 5px var(--retro-cyan), 0 0 20px var(--retro-cyan);
+  animation: flicker 1.5s infinite alternate;
+}
+
+.start-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: var(--retro-green);
+  border: 3px solid var(--retro-yellow);
+  border-radius: 4px;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px var(--retro-green);
+  transition: all 0.2s ease-in-out;
+}
+
+.start-btn:hover {
+  background: var(--retro-pink);
+  color: white;
+  border-color: var(--retro-cyan);
+  box-shadow: 0px 0px 12px var(--retro-pink);
+}
+
+/* Lessons Section */
+.lessons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: black;
+  border: 3px solid var(--retro-cyan);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px var(--retro-cyan);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  color: var(--retro-yellow);
+}
+
+.card h2 {
+  color: var(--retro-pink);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.card p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background: var(--retro-green);
+  color: black;
+  border: 2px solid var(--retro-yellow);
+  padding: 8px 12px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px var(--retro-green);
+  transition: all 0.2s ease-in-out;
+}
+
+.card button:hover {
+  background: var(--retro-pink);
+  color: white;
+  border-color: var(--retro-cyan);
+  box-shadow: 0px 0px 10px var(--retro-pink);
+}
+
+/* Footer */
+footer {
+  background: black;
+  border-top: 4px solid var(--retro-cyan);
+  color: var(--retro-green);
+  text-shadow: 0px 0px 6px var(--retro-green);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
